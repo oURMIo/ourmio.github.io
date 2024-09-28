@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body,
+header h1,
+section,
+.download-btn,
+footer {
+    transition: background-color 0.5s, color 0.5s;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212;
@@ -11,6 +19,76 @@ body {
     padding: 20px;
     line-height: 1.8;
     text-align: center;
+}
+
+body.light-theme {
+    background-color: #f9f9f9;
+    color: #333333;
+}
+
+body.light-theme header h1 {
+    color: #6200ea;
+}
+
+body.light-theme header p {
+    color: #555555;
+}
+
+body.light-theme section {
+    background-color: #f2f2f2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme h2 {
+    color: #6200ea;
+}
+
+body.light-theme ul li {
+    color: #333333;
+}
+
+body.light-theme .download-btn {
+    background-color: #6200ea;
+    color: #fff;
+}
+
+body.light-theme .download-btn:hover {
+    background-color: #3700b3;
+    color: #fff;
+}
+
+body.light-theme footer {
+    background-color: #6200ea;
+    color: #ffffff;
+}
+
+body.light-theme footer p {
+    color: #ffffff;
+}
+
+body.light-theme .project h3,
+body.light-theme .job h3 {
+    color: #a0a0a0;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #bb86fc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, color 0.3s;
+    z-index: 1000;
+    border: none;
+}
+
+.theme-toggle:hover {
+    background-color: #3700b3;
+    color: #e0e0e0;
 }
 
 header {
@@ -95,10 +173,10 @@ ul li {
 .job h3 {
     text-align: center;
     font-size: 1.5rem;
-    color: #e0e0e0;
     margin-bottom: 10px;
     position: relative;
     display: inline-block;
+    transition: color 0.5s;
 }
 
 .team-size {
@@ -111,7 +189,7 @@ ul li {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #3700b3;
+    background-color: #bb86fc;
     color: #fff;
     margin-top: 50px;
     border-radius: 8px;
